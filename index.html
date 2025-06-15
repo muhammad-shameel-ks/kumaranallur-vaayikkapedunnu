@@ -189,22 +189,22 @@
             class="book-cover rounded-lg shadow-lg w-full"
           />
           <img
-            src="images/book-irupatham.jpg"
+            src="https://via.placeholder.com/200x300/c06b3e/ffffff?text=ഇരുപതാം+നൂറ്റാണ്ട്"
             alt="Book Cover for Irupatham Noottandinte Ithihasam"
             class="book-cover rounded-lg shadow-lg w-full"
           />
           <img
-            src="images/book-asuravithu.jpg"
+            src="https://via.placeholder.com/200x300/4a5d23/ffffff?text=അസുരവിത്ത്"
             alt="Book Cover for Asuravithu"
             class="book-cover rounded-lg shadow-lg w-full"
           />
           <img
-            src="images/book-manju.jpg"
+            src="https://via.placeholder.com/200x300/b48811/ffffff?text=മഞ്ഞ്"
             alt="Book Cover for Manju"
             class="book-cover rounded-lg shadow-lg w-full"
           />
           <img
-            src="images/book-balidarsanam.jpg"
+            src="https://via.placeholder.com/200x300/c06b3e/ffffff?text=ബലിദർശനം"
             alt="Book Cover"
             class="book-cover rounded-lg shadow-lg w-full"
           />
@@ -337,6 +337,18 @@
     </div>
 
     <script>
+      // --- Handle missing images ---
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll("img");
+        images.forEach((img) => {
+          img.addEventListener("error", function () {
+            // Replace with a placeholder or hide the image
+            this.style.display = "none";
+            console.warn("Image not found:", this.src);
+          });
+        });
+      });
+
       // --- Data for Writers ---
       const writersData = {
         mt: {
